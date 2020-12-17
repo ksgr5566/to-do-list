@@ -5,47 +5,9 @@
 
 2. You are expected to write the code in `todo.cpp` file.
 
-3. You should be able to build the app by running `make app`
-
-4. Once you are done with the changes you should be able to execute the todo app by running the following commandfrom the terminal.
-
-   **On Windows:**
-
-   ```
-   ./todo.bat
-   ```
-
-   **On \*nix:**
-
-   ```
-   ./todo.sh
-   ```
-
-## Run Automated Tests
-
-1. Install Node.js: You need to have npm installed in your computer for this problem. It comes with Node.js and you can get it by installing Node from https://nodejs.org/en/
-
-2. Run `npm install` to install all dependencies
-
-3. Create symbolic link to the executable file
-
-   **On Windows:**
-
-   ```
-   > mklink todo todo.bat
-   ```
-
-   **On \*nix:**
-
-   ```
-   $ ln -s todo.sh todo
-   ```
-
-4. Now run `npm test` and you will see all the tests failing. As you fill in each functionality, you can re-run the tests to see them passing one by one.
-
 ## Specification
 
-1. The app can be run in the console with `./todo`.
+1. The app can be run in the console with `./todo`. (Ignore `./` if you are using windows terminal)
 
 2. The app should read from and write to a `todo.txt` text file. Each todo item occupies a single line in this file. Here is an example file that has 2 todo items.
 
