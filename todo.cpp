@@ -98,19 +98,23 @@ void done(int i,string cwd){
     temp_file.open(directory+"temp.txt", ofstream::out);
     fstream done;
     done.open(directory+"done.txt",ios::in | ios::app );
+    const int MAXLEN = 80;
+    char s[MAXLEN];
+    time_t t = time(0);
+    strftime(s, MAXLEN, "%d/%m/%Y", localtime(&t));
     char c;
     if(i!=1){
         int line_no = 1;
         while (is.get(c)){
             if (c == '\n') line_no++;
             if (line_no != i) temp_file << c;
-            else done << c;
+            else done << s << "  "  << c;
         }
     }else{
          done << '\n';
          while (is.get(c)){
              if(c=='\n') break;
-             done << c;
+             done << s << "  "  << c;
          }
          while (is.get(c)) temp_file << c;
     }
