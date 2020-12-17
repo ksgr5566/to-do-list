@@ -63,7 +63,6 @@ void del(int i,string cwd){
             if (line_no != i) temp_file << c;
         }
     }else{
-         int line_no = 1;
          while (is.get(c)) if(c=='\n') break;
          while (is.get(c)) temp_file << c;
     }
@@ -109,7 +108,6 @@ void done(int i,string cwd){
         }
     }else{
          done << '\n';
-         int line_no = 1;
          while (is.get(c)){
              if(c=='\n') break;
              done << c;
